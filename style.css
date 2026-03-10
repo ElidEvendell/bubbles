@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding:20px;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+.pond {
+    position: relative;
+    background-color: skyblue;
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+#randomModeBtn {
+    width: 100%;
+    max-width: 500px;
+    border: 2px solid skyblue;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 12px 0;
+    cursor: pointer;
+    transition: 0.3s;
+    color: skyblue;
+    background: transparent;
+}
+
+
+#randomModeBtn.rainbow-text {
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.blue-text {
+    color: skyblue;
+}
+
+@media (min-width: 600px) {
+    #randomModeBtn {
+        font-size: 24px;      /* возвращаем крупный шрифт */
+        padding: 13px 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    #randomModeBtn {
+        font-size: 18px;
+        padding: 10px 0;
+        width: 100%;
+    }
+}
+
+.bubble {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    transform: scale(1);
+    opacity: 0.8;
+    transition: transform 5s ease-out, opacity 5s ease-out;
+    pointer-events: none;
+}
+
+.bubble-active {
+    transform: scale(100);
+    opacity: 0;
+}
