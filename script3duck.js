@@ -27,6 +27,7 @@ if (duck.complete) {
     duck.addEventListener('load', setDuckToCenter);
 }
 
+// Обработчик начала перетаскивания
 duck.addEventListener('mousedown', function(event) {
     event.preventDefault();
     isDragging = true;
@@ -53,7 +54,7 @@ duck.addEventListener('mousedown', function(event) {
         moveAt(event.clientX, event.clientY);
 
         const now = Date.now();
-        if (now - lastBubbleTime1 >= BUBBLE_INTERVAL) {
+        if (now - lastBubbleTime1 >= BUBBLE_INTERVAL2) {
             lastBubbleTime1 = now;
 
             const duckRect = duck.getBoundingClientRect();
