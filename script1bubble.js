@@ -45,12 +45,13 @@ pond.onclick = function(event) {
     pond.appendChild(bubble)
 
     setTimeout(() => {
-        bubble.classList.add('bubble-active')
+        bubble.classList.add('bubble--active')
     }, 10)
 
     bubble.addEventListener('transitionend', function() {
         bubble.remove()
     })
 }
+
 
 
