@@ -1,7 +1,10 @@
+console.log('Скрипт пруда с кликающими пузыриками загружен')
+
 const randomTo = (max) => Math.trunc(Math.random() * max);
 
 let randomMode = false;
 
+const pond1 = document.getElementById('pond1')
 const randomModeBtn = document.getElementById('randomModeBtn');
 
 randomModeBtn.addEventListener('click', function() {
@@ -18,8 +21,8 @@ randomModeBtn.addEventListener('click', function() {
     }
 });
 
-pond.onclick = function(event) {
-    let rect = pond.getBoundingClientRect();
+pond1.onclick = function(event) {
+    let rect = pond1.getBoundingClientRect();
 
     let bubble = document.createElement('div')
     bubble.className = 'bubble';
@@ -42,7 +45,7 @@ pond.onclick = function(event) {
         bubble.style.backgroundColor = `rgba(${randomR}, ${randomG}, ${randomB}, 0.8)`;
     }
 
-    pond.appendChild(bubble)
+    pond1.appendChild(bubble)
 
     setTimeout(() => {
         bubble.classList.add('bubble--active')
@@ -52,6 +55,3 @@ pond.onclick = function(event) {
         bubble.remove()
     })
 }
-
-
-
