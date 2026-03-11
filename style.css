@@ -19,7 +19,25 @@ body {
     overflow: hidden;
 }
 
+.heading {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    border: 2px solid skyblue;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    padding: 12px 0;
+    cursor: pointer;
+    transition: 0.3s;
+    color: skyblue;
+    background: transparent;
+
+}
+
 #randomModeBtn {
+    font-family: Arial, sans-serif;
     width: 100%;
     max-width: 500px;
     border: 2px solid skyblue;
@@ -46,9 +64,13 @@ body {
 
 @media (min-width: 600px) {
     #randomModeBtn {
-        font-size: 24px;      /* возвращаем крупный шрифт */
+        font-size: 24px;
         padding: 13px 0;
-        width: 100%;
+    }
+
+    .heading {
+        font-size: 24px;
+        padding: 13px 0;
     }
 }
 
@@ -56,7 +78,11 @@ body {
     #randomModeBtn {
         font-size: 18px;
         padding: 10px 0;
-        width: 100%;
+    }
+
+    .heading {
+        font-size: 18px;
+        padding: 10px 0;
     }
 }
 
@@ -72,7 +98,19 @@ body {
     pointer-events: none;
 }
 
-.bubble-active {
+.bubble--active {
     transform: scale(100);
+    opacity: 0;
+}
+
+
+#pond2 {
+    overflow: hidden;
+}
+
+
+.bubble--active2 {
+    transition: transform 3s ease-out, opacity 3s ease-out;
+    transform: scale(13);
     opacity: 0;
 }
