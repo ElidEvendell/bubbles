@@ -1,3 +1,5 @@
+console.log('Скрипт пруда с бегающими пузыриками загружен')
+
 const pond2 = document.getElementById('pond2')
 
 let lastBubbleTime = 0;
